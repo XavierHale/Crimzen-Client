@@ -17,7 +17,7 @@ powershell -Command "& {Add-Type -AssemblyName Microsoft.VisualBasic; [Microsoft
 set /p OUT=<%TEMP%\out.tmp
 set msgBoxArgs="& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('You have entered: %OUT%', 'Crimzen');}"
 powershell -Command %msgBoxArgs%
-echo "Loaded Crimzen V2.5">> log.txt
+echo "Loaded Crimzen V3.0">> log.txt
 mode con: cols=140 lines=40
 cls
 echo       ::::::::  
@@ -64,7 +64,8 @@ echo #+#    #+#
 ping 0.0.0.0.0 >nul  
 echo ########        
 echo Copyright 2021  
-echo Ver 2.5 by CSBX inc
+echo Ver 3.0
+ by CSBX inc
 echo Succesfully Loaded, welcome to Crimzen!
 timeout 2 /nobreak >nul
 :choice
