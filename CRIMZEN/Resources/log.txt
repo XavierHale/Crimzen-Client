@@ -1,2 +1,8 @@
 "Opened Autoclicker"
 "Opened QDoS"
+"Opened Command prompt"
+"Opened Powershell"
+"Opened Notepad"
+"Opened Autoclicker"
+"Opened Autoclicker"
+"Opened QDoS"

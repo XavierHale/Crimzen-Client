@@ -64,13 +64,11 @@ echo #+#    #+#
 ping 0.0.0.0.0 >nul  
 echo ########        
 echo Copyright 2021  
-echo Ver 3.0
- by CSBX inc
+echo Ver 3.0 by CSBX inc
 echo Succesfully Loaded, welcome to Crimzen!
 timeout 2 /nobreak >nul
 :choice
 cls
-cd ChatTest
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 ping 0.0.0.0.0 >nul  
 echo l       ::::::::       :::::::::       :::::::::::         :::   :::       :::::::::       ::::::::::       ::::    :::                   l 
@@ -98,10 +96,10 @@ color B
 echo l     l--------Opening-------l
 echo l     l (1) CMD              l
 echo l     l (2) Powershell       l
-echo l     l (3) Notepad          l
-echo l     l----------------------l
-echo l     
-echo l     
+echo l     l (3) Notepad          l         l---------------Updateing------------------l
+echo l     l----------------------l         l To update, run the UpdateCrimzen program l
+echo l                                      l that you set up in README.txt            l
+echo l                                      l------------------------------------------l
 echo l     l-------Utilites-------l
 echo l     l (4) Autoclicker      l
 echo l     l (5) QDoS             l
@@ -153,7 +151,7 @@ echo "Opened Iexpress Wizard">> Resources\log.txt
   goto :color
 ) else (if %homemenu% ==11 (
   goto :morgame
-)else (echo Invalid Statement)))))))))))))
+) else ( echo Invalid Statement )))))))))))))
 goto :choice
 :autoclick
 cd Resources\applets
