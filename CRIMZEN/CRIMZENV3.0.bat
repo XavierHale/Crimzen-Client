@@ -96,7 +96,7 @@ color B
 echo l     l--------Opening-------l
 echo l     l (1) CMD              l
 echo l     l (2) Powershell       l
-echo l     l (3) Notepad          l         l---------------Updateing------------------l
+echo l     l (3) Notepad          l         l---------------Updating-------------------l
 echo l     l----------------------l         l To update, run the UpdateCrimzen program l
 echo l                                      l that you set up in README.txt            l
 echo l                                      l------------------------------------------l
