@@ -138,9 +138,10 @@ echo "Opened QDoS">> Resources\log.txt
     timeout 1 /nobreak >nul
     exit) else  ( if %homemenu% ==69 ( 
     echo "Viewed Credits">> Resources\log.txt
-    echo Crimzen Client V1.5 by CSBX inc.
+    echo Crimzen Client V3.0 by CSBX inc.
     echo Main Programer: Xavier
     echo Seccondary Programer: Nick
+    echo 
 ) else ( If %homemenu% ==6 (goto :vib
 echo "Played Vibrant Venture">> Resources\log.txt
 ) else ( If %homemenu% ==7 (goto :express
