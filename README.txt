@@ -6,3 +6,4 @@ Again, thanks for using our software
 Thanks,
 Xavier Hale
 Head Programer at CSBX
+(P.S., if you want your software bundled with Crimzen, contact us at csbx@gmail.com 
