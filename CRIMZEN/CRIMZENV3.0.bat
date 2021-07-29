@@ -356,6 +356,7 @@ timeout 1 /nobreak >nul
 echo Loaded!
 timeout 2 /nobreak >nul
 cls
+:loadedshop
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 ping 0.0.0.0.0 >nul  
 echo l       ::::::::       :::::::::       :::::::::::         :::   :::       :::::::::       ::::::::::       ::::    :::                   l 
@@ -377,7 +378,7 @@ ping 0.0.0.0.0 >nul
 echo l V3.0 by CSBX inc.                                                                                                                       l
 ping 0.0.0.0.0 >nul  
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
-echo l   
+echo l
 echo l       l---------Welcome!---------l
 echo l       l Use just like the home   l
 echo l       l menu, exept you can type l
@@ -409,10 +410,10 @@ set /p shopmenu=Please enter the number of the program you would like to downloa
 if %shopmenu%==1 git clone https://github.com/XavierHale/Shop-vibvent
 if %shopmenu%==1e ( echo A platformer where you have to switch between characters to succeed
 pause
-goto :shop
+goto :loadedshop
 )
-if %shopmenu%==2 git clone https://github.com/XavierHale/Shop-vscode
+if %shopmenu%==2 git clone https://github.com/XavierHale/Shop-vscode 
 if %shopmenu%==2e ( echo A very useable and expandable editor (We actauly used this to code Crimzen!)
 pause
-goto :shop
+goto :loadedshop
 )
