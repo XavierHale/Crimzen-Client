@@ -87,7 +87,7 @@ echo l ########       ###    ###      ###########       ###       ###     ######
 ping 0.0.0.0.0 >nul  
 echo l Copyright 2021                                                                                                                          l
 ping 0.0.0.0.0 >nul  
-echo l V2.5 by CSBX inc.                                                                                                                       l
+echo l V3.0 by CSBX inc.                                                                                                                       l
 ping 0.0.0.0.0 >nul  
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 if %OUT% ==Xavier (echo l Hello, Xavier, Presedent of CSBX!
@@ -103,16 +103,16 @@ echo l                                      l-----------------------------------
 echo l     l-------Utilites-------l
 echo l     l (4) Autoclicker      l
 echo l     l (5) QDoS             l
-echo l     l (7) Iexpress Wizard  l
+echo l     l (6) Iexpress Wizard  l
 echo l     l----------------------l
 echo l
 echo l     l-------Customize------l
-echo l     l (9) Change color     l
-echo l     l (10) Old Gui         l
+echo l     l (7) Change color     l
+echo l     l (8) Online Shop      l
 echo l     l----------------------l
 echo l
 echo l     l---------Games--------l
-echo l     l (11) More Games      l
+echo l     l (9) More Games       l
 echo l     l----------------------l
 echo l
 echo l
@@ -121,38 +121,15 @@ echo l
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 :subchoice
 set /p homemenu=What would you like to do?
-if %homemenu% ==1 (start cmd.exe
-echo "Opened Command prompt">> Resources\log.txt
-echo Succesfully started Command Prompt) else (if %homemenu% ==2 (start powershell.exe
-echo "Opened Powershell">> Resources\log.txt
-echo Succesfully started Powershell ) else (if %homemenu% ==3 (start notepad.exe
-echo "Opened Notepad">> Resources\log.txt
-echo Succesfully started Notepad ) else (if %homemenu% ==4 ( echo Succesfully started Autoclicker
-echo "Opened Autoclicker">> Resources\log.txt
-goto :autoclick
-) else (if %homemenu% ==5 ( echo Succesfully started QDoS
-echo "Opened QDoS">> Resources\log.txt
-    goto :QDoS
-) else (if %homemenu% ==exit (
-    cls
-    timeout 1 /nobreak >nul
-    exit) else  ( if %homemenu% ==69 ( 
-    echo "Viewed Credits">> Resources\log.txt
-    echo Crimzen Client V3.0 by CSBX inc.
-    echo Main Programer: Xavier
-    echo Seccondary Programer: Nick
-    echo 
-) else ( If %homemenu% ==6 (goto :vib
-echo "Played Vibrant Venture">> Resources\log.txt
-) else ( If %homemenu% ==7 (goto :express
-echo "Opened Iexpress Wizard">> Resources\log.txt
-) else (if %homemenu% ==8 (goto :extend
-) else (if %homemenu% ==0 (goto :help
-) else ( if %homemenu% ==9 (
-  goto :color
-) else (if %homemenu% ==11 (
-  goto :morgame
-) else ( echo Invalid Statement )))))))))))))
+if %homemenu%==1 start cmd.exe
+if %homemenu%==2 start powershell.exe
+if %homemenu%==3 Notepad.exe
+if %homemenu%==4 goto :autoclick
+if %homemenu%==5 goto :QDOS
+if %homemenu%==6 iexpress.exe
+if %homemenu%==7 goto :color
+if %homemenu%==8 goto :shop
+if %homemenu%==9 goto :morgame
 goto :choice
 :autoclick
 cd Resources\applets
@@ -297,7 +274,7 @@ echo l ########       ###    ###      ###########       ###       ###     ######
 ping 0.0.0.0.0 >nul                       
 echo l Copyright 2021                                                                                                                          l
 ping 0.0.0.0.0 >nul  
-echo l V2.5 by CSBX inc.                                                                                                                       l
+echo l V3.0 by CSBX inc.                                                                                                                       l
 ping 0.0.0.0.0 >nul  
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 echo l
@@ -363,3 +340,69 @@ else (
   )
 )
 goto :morgame
+:shop
+cls
+Echo Loading shop
+timeout 1 /nobreak >nul
+cls
+echo Loading shop.
+timeout 1 /nobreak >nul
+cls 
+echo Loading shop..
+timeout 1 /nobreak >nul
+cls
+echo Loading shop...
+timeout 1 /nobreak >nul
+echo Loaded!
+timeout 2 /nobreak >nul
+cls
+echo l-----------------------------------------------------------------------------------------------------------------------------------------l
+ping 0.0.0.0.0 >nul  
+echo l       ::::::::       :::::::::       :::::::::::         :::   :::       :::::::::       ::::::::::       ::::    :::                   l 
+ping 0.0.0.0.0 >nul  
+echo l     :+:    :+:      :+:    :+:          :+:            :+:+: :+:+:           :+:        :+:              :+:+:   :+:                    l
+ping 0.0.0.0.0 >nul  
+echo l    +:+             +:+    +:+          +:+           +:+ +:+:+ +:+         +:+         +:+              :+:+:+  +:+                     l
+ping 0.0.0.0.0 >nul  
+echo l   +#+             +#++:++#:           +#+           +#+  +:+  +#+        +#+          +#++:++#         +#+ +:+ +#+                      l
+ping 0.0.0.0.0 >nul  
+echo l  +#+             +#+    +#+          +#+           +#+       +#+       +#+           +#+              +#+  +#+#+#                       l
+ping 0.0.0.0.0 >nul  
+echo l #+#    #+#      #+#    #+#          #+#           #+#       #+#      #+#            #+#              #+#   #+#+#                        l
+ping 0.0.0.0.0 >nul  
+echo l ########       ###    ###      ###########       ###       ###     #########       ##########       ###    ####                         l
+ping 0.0.0.0.0 >nul                       
+echo l Copyright 2021                                                                                                                          l
+ping 0.0.0.0.0 >nul  
+echo l V3.0 by CSBX inc.                                                                                                                       l
+ping 0.0.0.0.0 >nul  
+echo l-----------------------------------------------------------------------------------------------------------------------------------------l
+echo l
+echo l
+echo l
+echo l
+echo l
+echo l
+echo l
+echo l
+echo l     
+echo l     
+echo l     
+echo l     
+echo l     
+echo l     
+echo l
+echo l     
+echo l     
+echo l     
+echo l     
+echo l
+echo l    
+echo l     
+echo l     
+echo l
+echo l
+echo l
+echo l
+echo l-----------------------------------------------------------------------------------------------------------------------------------------l
+set /p shopmenu=Please enter the number of the program you would like to download:
