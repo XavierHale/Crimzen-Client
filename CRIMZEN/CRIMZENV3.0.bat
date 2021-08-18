@@ -3,11 +3,6 @@
 : If you would like to help, message us at csbxinc@gmail.com
 @echo off
 color 4
-if exist Resources\extension\ (
-  echo Folder "extension" located
-) else (
-  powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; $mainForm = New-Object System.Windows.Forms.Form; $mainForm.Text = 'Crimzen Error'; $lbl = New-Object System.Windows.Forms.Label; $lbl.Text = 'Extension Folder not found'; $mainForm.Controls.Add($lbl); $mainForm.StartPosition = [System.Windows.Forms.FormStartPosition]::CenterScreen; $mainForm.ShowDialog()}"
-)
 if exist Resources\applets\ (
   echo Folder "applets" located
 ) else (
