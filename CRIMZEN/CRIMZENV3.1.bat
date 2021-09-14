@@ -1,4 +1,4 @@
-@echo off
+ @echo off
 :setup
 color 4
 mode con: cols=140 lines=40
@@ -42,37 +42,7 @@ echo  +#+
 echo #+#    #+#    
 echo ########
 echo [----------]0%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [#=--------]18%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [###-------]30%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [####=-----]48%
-ping 0.0.0.0 >nul
+timeout 1 >nul
 cls
 echo       ::::::::  
 echo     :+:    :+:  
@@ -201,23 +171,6 @@ goto :choice
 start iexpress.exe
 echo Iexpress wizard started
 timeout 1 /nobreak >nul
-goto :choice
-:extend
-cd C:\CRIMZEN\
-echo     dBP     dBBBBP  dBBBBBb      dBBBBb             dBBBP  `Bb  .BP  dBBBBBBP     dBBBP      dBBBBb  dBBBBBBP     dBP     dBBBBP     dBBBBb
-echo            dB'.BP        BB         dB'                        .BP                              dBP                      dB'.BP         dBP
-echo   dBP     dB'.BP     dBP BB    dBP dB'            dBBP       dBBK     dBP       dBBP       dBP dBP    dBP       dBP     dB'.BP     dBP dBP 
-echo  dBP     dB'.BP     dBP  BB   dBP dB'            dBP        dB'      dBP       dBP        dBP dBP    dBP       dBP     dB'.BP     dBP dBP  
-echo dBBBBP  dBBBBP     dBBBBBBB  dBBBBB'            dBBBBP     dB' dBP  dBP       dBBBBP     dBP dBP    dBP       dBP     dBBBBP     dBP dBP                                                                                                                                             
-echo Go to your C:\CRIMZEN\extention and put an extention in there. Make sure you only have one in at once or it will confuse
-echo the system because it will attempt to load things that will try to edit something at the same time.
-timeout 30
-echo Loading the extention...
-dir /b /a-d Resources\
-echo Crimzen folder located,
-set /p extendname=Enter the name above (Extension Name):
-timeout 20
-start %extendname%
 goto :choice
 :help
 echo               - Help Menu -
