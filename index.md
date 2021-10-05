@@ -2,7 +2,7 @@
 
 Hello! Crimzen is a micro-os for Windows apps and custom apps!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We made/are making this to make a simple yet functional os for n e r d s (:l)
 
 ### What does it do?
 
