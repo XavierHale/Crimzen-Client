@@ -2,22 +2,11 @@
 :setup
 color 4
 mode con: cols=140 lines=40
-set ver=3.0
+set ver=3.1.2
 title Crimzen Version %ver%
-echo       ::::::::  
-ping 0.0.0.0.0 >nul
-echo     :+:    :+:  
-ping 0.0.0.0.0 >nul
-echo    +:+        
-ping 0.0.0.0.0 >nul  
-echo   +#+         
-ping 0.0.0.0.0 >nul  
-echo  +#+          
-ping 0.0.0.0.0 >nul  
-echo #+#    #+#    
-ping 0.0.0.0.0 >nul  
-echo ########
-timeout 1 /nobreak >nul
+echo Looking for user
+powershell -Command "& {Add-Type -AssemblyName Microsoft.VisualBasic; [Microsoft.VisualBasic.Interaction]::InputBox('Enter your name:', 'Crimzen')}" > %TEMP%\out.tmp
+set /p OUT=<out.tmp
 cls
 echo       ::::::::  
 ping 0.0.0.0.0 >nul
@@ -82,8 +71,7 @@ echo  +#+
 echo #+#    #+#    
 echo ########
 echo [#####=----]59%
-powershell -Command "& {Add-Type -AssemblyName Microsoft.VisualBasic; [Microsoft.VisualBasic.Interaction]::InputBox('Enter your name:', 'Crimzen')}" > %TEMP%\out.tmp
-set /p OUT=<%TEMP%\out.tmp
+cd ..
 ping 0.0.0.0 >nul
 cls
 echo       ::::::::  
@@ -120,6 +108,7 @@ echo Copyright 2021 CSBX inc.
 echo IF you paid for this, you got scammed! This is freeware, and can be downloaded at
 echo https://github.com/XavierHale/Crimzen-Client
 pause
+cls
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 ping 0.0.0.0.0 >nul  
 echo l       ::::::::       :::::::::       :::::::::::         :::   :::       :::::::::       ::::::::::       ::::    :::                   l 
