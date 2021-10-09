@@ -4,104 +4,8 @@ color 4
 mode con: cols=140 lines=40
 set ver=3.1.2
 title Crimzen Version %ver%
-echo Looking for user
-powershell -Command "& {Add-Type -AssemblyName Microsoft.VisualBasic; [Microsoft.VisualBasic.Interaction]::InputBox('Enter your name:', 'Crimzen')}" > %TEMP%\out.tmp
-set /p OUT=<out.tmp
+cd Resources
 cls
-echo       ::::::::  
-ping 0.0.0.0.0 >nul
-echo     :+:    :+:  
-ping 0.0.0.0.0 >nul
-echo    +:+        
-ping 0.0.0.0.0 >nul  
-echo   +#+         
-ping 0.0.0.0.0 >nul  
-echo  +#+          
-ping 0.0.0.0.0 >nul  
-echo #+#    #+#    
-ping 0.0.0.0.0 >nul  
-echo ########
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [----------]0%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [#=--------]18%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [###-------]30%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [####=-----]48%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [#####=----]59%
-cd ..
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [#######---] 70%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [########=-]88%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [##########]100%
 timeout 1 /nobreak >nul
 echo Succesfuly loaded, welcome to Crimzen!
 echo Copyright 2021 CSBX inc.
@@ -109,6 +13,7 @@ echo IF you paid for this, you got scammed! This is freeware, and can be downloa
 echo https://github.com/XavierHale/Crimzen-Client
 pause
 cls
+:home
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 ping 0.0.0.0.0 >nul  
 echo l       ::::::::       :::::::::       :::::::::::         :::   :::       :::::::::       ::::::::::       ::::    :::                   l 
@@ -130,13 +35,12 @@ ping 0.0.0.0.0 >nul
 echo l V3.0 by CSBX inc.                                                                                                                       l
 ping 0.0.0.0.0 >nul  
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
-if %OUT% ==Xavier (echo l Hello, Xavier, Presedent of CSBX!
-color B
-) else (echo l Hello %OUT%, what would you like to do?)
+echo l
+echo l
 echo l     l-------Terminals------l
 echo l     l (1) CMD              l
 echo l     l (2) Powershell       l
-echo l     l (?) CSBXterm         l         l---------------Updating-------------------l
+echo l     l (10) CSBXterm        l         l---------------Updating-------------------l
 echo l     l----------------------l         l To update, run the UpdateCrimzen program l
 echo l                                      l that you set up in README.txt            l
 echo l     l-------Utilites-------l         l (Note: This is a bit buggy and may not   l
@@ -169,28 +73,33 @@ if %homemenu%==6 iexpress.exe
 if %homemenu%==7 goto :color
 if %homemenu%==8 goto :shop
 if %homemenu%==9 goto :morgame
-goto :choice
+if %homemenu%==exit goto :exit
+if %homemenu%==10 goto :cs
+goto :home
 :autoclick
 cd Resources\applets
 start AutoClicker.exe
 timeout 1 /nobreak >nul
-goto :choice
+goto :home
 :QDoS
 cd Resources\applets
 start QDOS.bat
 timeout 1 /nobreak >nul
-goto :choice
+goto :home
+:cs
+echo Coming Soon!
+pause
 :vib
 cd Resources\applets
 start Vib
 echo Launched Vibrant Venture
 timeout 1 /nobreak >nul
-goto :choice
+goto :home
 :express
 start iexpress.exe
 echo Iexpress wizard started
 timeout 1 /nobreak >nul
-goto :choice
+goto :home
 :extend
 cd C:\CRIMZEN\
 echo     dBP     dBBBBP  dBBBBBb      dBBBBb             dBBBP  `Bb  .BP  dBBBBBBP     dBBBP      dBBBBb  dBBBBBBP     dBP     dBBBBP     dBBBBb
@@ -207,7 +116,7 @@ echo Crimzen folder located,
 set /p extendname=Enter the name above (Extension Name):
 timeout 20
 start %extendname%
-goto :choice
+goto :home
 :help
 echo               - Help Menu -
 echo Crimzen is a hub for computer applications that are usualy hard to get to.
@@ -218,7 +127,7 @@ echo To load an extension, place it in C:\CRIMZEN (The CRIMZEN folder in your C:
 echo name of the extension.
 echo Press a key to continue...
 timeout 280  >nul
-goto :choice
+goto :home
 :color
 echo 0	=	Black	 	8	=	Gray
 echo 1	=	Blue	 	9	=	Light Blue
@@ -230,7 +139,7 @@ echo 6	=	Yellow	 	E	=	Light Yellow
 echo 7	=	White	 	F	=	Bright White
 set /p color=Select a color form the table above. First digit is background, seccond is text. (Ex, for a white background and blue text, enter 71)
 color %color%
-goto :choice
+goto :home
 :morgame
 cls
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
@@ -310,7 +219,7 @@ if %gamemenu% ==4 (
 )
 else (
   if %gamemenu% ==5
-  (goto :choice
+  (goto :home
   ) else (
     echo Invalid Choice
     pause
@@ -394,3 +303,10 @@ if %shopmenu%==2e ( echo A very useable and expandable editor (We actauly used t
 pause
 goto :loadedshop
 )
+rem Various errors
+:userfileerr
+echo User file not found
+goto :setup
+:exit 
+endlocal
+goto :eof
