@@ -22,86 +22,6 @@ echo #+#    #+#
 ping 0.0.0.0.0 >nul  
 echo ########
 ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [----------]0%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [#=--------]18%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [###-------]30%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [####=-----]48%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [#####=----]59%
-cd ..
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [#######---] 70%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [########=-]88%
-ping 0.0.0.0 >nul
-cls
-echo       ::::::::  
-echo     :+:    :+:  
-echo    +:+          
-echo   +#+          
-echo  +#+           
-echo #+#    #+#    
-echo ########
-echo [##########]100%
 timeout 1 /nobreak >nul
 echo Succesfuly loaded, welcome to Crimzen!
 echo Copyright 2021 CSBX inc.
@@ -321,17 +241,8 @@ goto :morgame
 cls
 Echo Loading shop
 timeout 1 /nobreak >nul
-cls
-echo Loading shop.
-timeout 1 /nobreak >nul
-cls 
-echo Loading shop..
-timeout 1 /nobreak >nul
-cls
-echo Loading shop...
-timeout 1 /nobreak >nul
 echo Loaded!
-timeout 2 /nobreak >nul
+pause
 cls
 :loadedshop
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
@@ -356,10 +267,10 @@ echo l V3.0 by CSBX inc.                                                        
 ping 0.0.0.0.0 >nul  
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 echo l
-echo l       l---------Welcome!---------l
-echo l       l Use just like the home   l
-echo l       l menu, exept you can type l
-echo l       l 'e' after the number to  l
+echo l       l---------Welcome!---------l    l------------------------l
+echo l       l Use just like the home   l    l Git is required to use l
+echo l       l menu, exept you can type l    l this.                  l
+echo l       l 'e' after the number to  l    l------------------------l
 echo l       l get info about that      l
 echo l       l peice of software        l
 echo l       l--------------------------l
@@ -367,8 +278,8 @@ echo l
 echo l       l--------------------------l
 echo l       l (1) Vibrant Venture      l
 echo l       l (2) Visual Studio code   l
-echo l     
-echo l     
+echo l       l (3) WifiCracker          l   
+echo l       l--------------------------l     
 echo l
 echo l     
 echo l     
@@ -385,12 +296,20 @@ echo l
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 set /p shopmenu=Please enter the number of the program you would like to download:
 if %shopmenu%==1 git clone https://github.com/XavierHale/Shop-vibvent
+goto :loadedshop
 if %shopmenu%==1e ( echo A platformer where you have to switch between characters to succeed
 pause
 goto :loadedshop
 )
 if %shopmenu%==2 git clone https://github.com/XavierHale/Shop-vscode 
+goto :loadedshop
 if %shopmenu%==2e ( echo A very useable and expandable editor (We actauly used this to code Crimzen!)
+pause
+goto :loadedshop
+)
+if %shopmenu%==3 git clone https://github.com/XavierHale/Shop-WifiCracker
+goto :loadedshop
+if %shopmenu%==3e ( echo A wifi password cracker developed by TUX)
 pause
 goto :loadedshop
 )
