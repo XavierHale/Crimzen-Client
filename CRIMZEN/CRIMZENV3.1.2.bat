@@ -25,6 +25,7 @@ echo Succesfuly loaded, welcome to Crimzen!
 echo Copyright 2021 CSBX inc.
 echo IF you paid for this, you got scammed! This is freeware, and can be downloaded at
 echo https://github.com/XavierHale/Crimzen-Client
+echo Loaded Succesfuly>errmsg.crm
 pause
 cls
 :home
