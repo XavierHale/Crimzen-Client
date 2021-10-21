@@ -1,6 +1,9 @@
 @echo off
+mode con: cols=32 lines=20
 title Crimzen Bootmanager 1.0
-echo Crimzen Bootmanager 
+echo      ^|---------------------^|
+echo      ^| Crimzen Bootmanager ^|
+echo      ^|---------------------^|
 echo This window will display messages sent from the Crimzen 
 pause
 cd CRIMZEN 

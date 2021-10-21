@@ -1,5 +1,4 @@
-ÿþ
-@echo off
+@echo off
 :setup
 color 4
 mode con: cols=140 lines=40
