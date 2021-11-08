@@ -20,11 +20,14 @@ echo #+#    #+#
 ping 0.0.0.0.0 >nul  
 echo ########
 ping 0.0.0.0 >nul
-timeout 1 /nobreak >nul
 echo Succesfuly loaded, welcome to Crimzen!
+ping 0.0.0.0 >nul
 echo Copyright 2021 CSBX inc.
+ping 0.0.0.0 >nul
 echo IF you paid for this, you got scammed! This is freeware, and can be downloaded at
+ping 0.0.0.0 >nul
 echo https://github.com/XavierHale/Crimzen-Client
+ping 0.0.0.0 >nul
 echo Loaded Succesfuly>errmsg.crm
 pause
 cls
@@ -104,6 +107,7 @@ goto :home
 :cs
 echo Coming Soon!
 pause
+goto :home
 :vib
 cd Resources\applets
 start Vib
