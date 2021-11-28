@@ -1,10 +1,14 @@
 @echo off
+:verifyinstall
+::This section checks the instalation to mkae sure all critical files are present
+if not exist \Resources (
+set msgBoxArgs="& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Folder not found: Resources', 'Crimzen');}"
+)
 :setup
 color 4
 mode con: cols=140 lines=40
-set ver=3.1.2
+set ver=3.1.3
 title Crimzen Version %ver%
-cd Resources
 cls
 echo       ::::::::  
 ping 0.0.0.0.0 >nul
@@ -21,13 +25,9 @@ ping 0.0.0.0.0 >nul
 echo ########
 ping 0.0.0.0 >nul
 echo Succesfuly loaded, welcome to Crimzen!
-ping 0.0.0.0 >nul
 echo Copyright 2021 CSBX inc.
-ping 0.0.0.0 >nul
-echo IF you paid for this, you got scammed! This is freeware, and can be downloaded at
-ping 0.0.0.0 >nul
+echo if you paid for this, you got scammed! This is freeware, and can be downloaded at
 echo https://github.com/XavierHale/Crimzen-Client
-ping 0.0.0.0 >nul
 echo Loaded Succesfuly>errmsg.crm
 pause
 cls
@@ -50,7 +50,7 @@ echo l ########       ###    ###      ###########       ###       ###     ######
 ping 0.0.0.0.0 >nul  
 echo l Copyright 2021                                                                                                                          l
 ping 0.0.0.0.0 >nul  
-echo l V3.1.2 by CSBX inc.                                                                                                                     l
+echo l V%ver% by CSBX inc.                                                                                                                     l
 ping 0.0.0.0.0 >nul  
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 echo l
@@ -91,50 +91,31 @@ if %homemenu%==6 iexpress.exe
 if %homemenu%==7 goto :color
 if %homemenu%==8 goto :shop
 if %homemenu%==9 goto :morgame
-if %homemenu%==exit goto :exit
+if %homemenu%==exit goto :eof
 if %homemenu%==10 goto :cs
 goto :home
 :autoclick
 cd Resources\applets
 start AutoClicker.exe
 timeout 1 /nobreak >nul
+cd ..
+cd ..
 goto :home
 :QDoS
 cd Resources\applets
 start QDOS.bat
 timeout 1 /nobreak >nul
+cd ..
+cd ..
 goto :home
 :cs
 echo Coming Soon!
 pause
 goto :home
-:vib
-cd Resources\applets
-start Vib
-echo Launched Vibrant Venture
-timeout 1 /nobreak >nul
-goto :home
 :express
 start iexpress.exe
 echo Iexpress wizard started
 timeout 1 /nobreak >nul
-goto :home
-:extend
-cd C:\CRIMZEN\
-echo     dBP     dBBBBP  dBBBBBb      dBBBBb             dBBBP  `Bb  .BP  dBBBBBBP     dBBBP      dBBBBb  dBBBBBBP     dBP     dBBBBP     dBBBBb
-echo            dB'.BP        BB         dB'                        .BP                              dBP                      dB'.BP         dBP
-echo   dBP     dB'.BP     dBP BB    dBP dB'            dBBP       dBBK     dBP       dBBP       dBP dBP    dBP       dBP     dB'.BP     dBP dBP 
-echo  dBP     dB'.BP     dBP  BB   dBP dB'            dBP        dB'      dBP       dBP        dBP dBP    dBP       dBP     dB'.BP     dBP dBP  
-echo dBBBBP  dBBBBP     dBBBBBBB  dBBBBB'            dBBBBP     dB' dBP  dBP       dBBBBP     dBP dBP    dBP       dBP     dBBBBP     dBP dBP                                                                                                                                             
-echo Go to your C:\CRIMZEN\extention and put an extention in there. Make sure you only have one in at once or it will confuse
-echo the system because it will attempt to load things that will try to edit something at the same time.
-timeout 30
-echo Loading the extention...
-dir /b /a-d Resources\
-echo Crimzen folder located,
-set /p extendname=Enter the name above (Extension Name):
-timeout 20
-start %extendname%
 goto :home
 :help
 echo               - Help Menu -
