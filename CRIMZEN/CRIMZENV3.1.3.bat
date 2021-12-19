@@ -31,6 +31,7 @@ echo https://github.com/XavierHale/Crimzen-Client
 echo Loaded Succesfuly>errmsg.crm
 pause
 cls
+:: The main section of Crimzen, has the main menu and all links to other menus
 :home
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 ping 0.0.0.0.0 >nul  
@@ -118,13 +119,13 @@ echo Iexpress wizard started
 timeout 1 /nobreak >nul
 goto :home
 :help
+::Help Section for Crimzen
 echo               - Help Menu -
 echo Crimzen is a hub for computer applications that are usualy hard to get to.
-echo Home Menu:
+echo Home Menu and Game Menu:
 echo To start a program, type the number in the parnthises next to it. (Ex. Type 0 for this menu)
-echo Extensions:
-echo To load an extension, place it in C:\CRIMZEN (The CRIMZEN folder in your C: drive) and enter the
-echo name of the extension.
+echo Shop:
+echo Similar to Home Menu, but you can type "e" after the number to get more information about the software.
 echo Press a key to continue...
 timeout 280  >nul
 goto :home
@@ -286,13 +287,13 @@ echo l--------------------------------------------------------------------------
 set /p shopmenu=Please enter the number of the program you would like to download:
 if %shopmenu%==1 git clone https://github.com/XavierHale/Shop-vibvent
 goto :loadedshop
-if %shopmenu%==1e ( echo A platformer where you have to switch between characters to succeed
+if %shopmenu%==1e ( echo A platformer where you have to switch between characters to succeed)
 pause
 goto :loadedshop
 )
 if %shopmenu%==2 git clone https://github.com/XavierHale/Shop-vscode 
 goto :loadedshop
-if %shopmenu%==2e ( echo A very useable and expandable editor (We actauly used this to code Crimzen!)
+if %shopmenu%==2e ( echo A easy to use and expandable editor (We actauly used this to program Crimzen!)
 pause
 goto :loadedshop
 )
