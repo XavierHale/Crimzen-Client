@@ -258,8 +258,8 @@ ping 0.0.0.0.0 >nul
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 echo l
 echo l       l---------Welcome!---------l    l------------------------l
-echo l       l Use just like the home   l    l Git is required to use l
-echo l       l menu, exept you can type l    l this.                  l
+echo l       l Use just like the home   l    l Git (not GitHub) is    l
+echo l       l menu, exept you can type l    l required to use this.  l
 echo l       l 'e' after the number to  l    l------------------------l
 echo l       l get info about that      l
 echo l       l peice of software        l
