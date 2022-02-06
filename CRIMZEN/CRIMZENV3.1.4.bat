@@ -92,8 +92,9 @@ if %homemenu%==6 iexpress.exe
 if %homemenu%==7 goto :color
 if %homemenu%==8 goto :shop
 if %homemenu%==9 goto :morgame
-if %homemenu%==exit goto :eof
+if %homemenu%==exit exit
 if %homemenu%==10 goto :cs
+if %homemenu%==dev goto :eof
 goto :home
 :autoclick
 cd Resources\applets
@@ -194,38 +195,11 @@ echo l
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 set /p gamemenu=What game do you want to load?
 cd Resources\applets\BatchGames
-if %gamemenu% ==1 (
-  start snake.bat
-)
-else (
-  goto :1
-)
-:1
-if %gamemenu% ==2 (
-  start flap
-)
-else (
-  goto :2
-)
-:2
-if %gamemenu% ==3 (
-  start war.bat
-)
-else (
-  goto :3
-)
-:3
-if %gamemenu% ==4 (
-  start drag.bat
-)
-else (
-  if %gamemenu% ==5
-  (goto :home
-  ) else (
-    echo Invalid Choice
-    pause
-  )
-)
+if %gamemenu% ==1 start snake.bat
+if %gamemenu% ==2 start flap
+if %gamemenu% ==3 start war.bat
+if %gamemenu% ==4 start drag.bat
+if %gamemenu% ==5 goto :home
 goto :morgame
 :shop
 cls
