@@ -7,7 +7,7 @@ set msgBoxArgs="& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.
 :setup
 color 4
 mode con: cols=140 lines=40
-set ver=3.1.3
+set /p ver=<ver.crm
 title Crimzen Version %ver%
 cls
 echo       ::::::::  
