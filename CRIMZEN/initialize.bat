@@ -16,14 +16,17 @@ ping 0.0.0.0 >nul
 FOR /F "tokens=* delims=" %%x in (ver.crm) DO set ver=%%x
 title Crimzen Login
 :login
+set val=
+set user=
 set /p userset=Enter your username:
 for /f "delims=" %%a in ('call ini.bat users.ini %userset% user') do (
     set val=%%a
     set user=%%a
 )
-echo Logging in as %val%
-echo Enter the password for %val%
+
 if %val%==%userset% (
+    echo Logging in as %val%
+    echo Enter the password for %val%
     set /p pass=Enter Password:
     for /f "delims=" %%a in ('call ini.bat users.ini %userset% password') do (
     set val=%%a
