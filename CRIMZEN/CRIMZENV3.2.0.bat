@@ -2,7 +2,6 @@
 :verifyinstall
 ::This section checks the instalation to mkae sure all critical files are present
 call verify.bat
-ping 0.0.0.0 >nul
 call initialize.bat
 title Crimzen Version %ver%
 echo Succesfuly loaded, welcome to Crimzen!
