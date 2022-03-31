@@ -154,8 +154,7 @@ echo l     l (4) Dragon Fight                                    l
 echo l     l (5) Back to Main Menu                               l
 echo l     l-----------------------------------------------------l
 echo l     
-echo l     
-echo l     
+echo l          
 echo l     
 echo l     
 echo l     
