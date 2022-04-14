@@ -229,9 +229,7 @@ echo l
 echo l     
 echo l     
 echo l
-echo l    
-echo l     
-echo l     
+echo l   
 echo l
 echo l
 echo l
@@ -239,23 +237,21 @@ echo l
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 set /p shopmenu=Please enter the number of the program you would like to download:
 if %shopmenu%==1 git clone https://github.com/XavierHale/Shop-vibvent
-goto :loadedshop
-if %shopmenu%==1e ( echo A platformer where you have to switch between characters to succeed)
+if %shopmenu%==1e ( echo A platformer where you have to switch between characters to succeed
 pause
 goto :loadedshop
 )
 if %shopmenu%==2 git clone https://github.com/XavierHale/Shop-vscode 
-goto :loadedshop
-if %shopmenu%==2e ( echo A easy to use and expandable editor (We actauly used this to program Crimzen!)
+if %shopmenu%==2e ( echo A easy to use and expandable editor {We actauly used this to program Crimzen!}
 pause
 goto :loadedshop
 )
 if %shopmenu%==3 git clone https://github.com/XavierHale/Shop-WifiCracker
-goto :loadedshop
-if %shopmenu%==3e ( echo A wifi password cracker developed by TUX)
+if %shopmenu%==3e ( echo A wifi password cracker developed by TUX
 pause
 goto :loadedshop
 )
+goto :loadedshop
 :exit 
 
 :end
