@@ -30,8 +30,8 @@ if %val%==%userset% (
     set /p pass=Enter Password:
     for /f "delims=" %%a in ('call ini.bat users.ini %userset% password') do (
     set val=%%a
-) 
-) else (
+)
+ ) else (
     echo User does not exist
     goto :login
 )

@@ -1,4 +1,5 @@
 @echo off
+:top
 :verifyinstall
 ::This section checks the instalation to mkae sure all critical files are present
 call verify.bat
@@ -36,11 +37,11 @@ ping 0.0.0.0.0 >nul
 echo l Welcome, %user%!
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
 echo l
-echo l     l-------Terminals------l
-echo l     l (1) CMD              l
-echo l     l (2) Powershell       l
-echo l     l (10) CSBXterm        l
-echo l     l----------------------l
+echo l     l-------Terminals------l    l-----Accounts------l
+echo l     l (1) CMD              l    l (10) Log out      l
+echo l     l (2) Powershell       l    l (11) New Account  l
+echo l     l (?) CSBXterm         l    l                   l
+echo l     l----------------------l    l-------------------l
 echo l                             
 echo l     l-------Utilites-------l
 echo l     l (3) Notepad          l
@@ -73,7 +74,7 @@ if %homemenu%==7 goto :color
 if %homemenu%==8 goto :shop
 if %homemenu%==9 goto :morgame
 if %homemenu%==exit goto :exit
-if %homemenu%==10 goto :cs
+if %homemenu%==10 goto :logout
 if %homemenu%==dev goto :end
 goto :home
 :autoclick
@@ -122,6 +123,10 @@ echo 7	=	White	 	F	=	Bright White
 set /p color=Select a color form the table above. First digit is background, seccond is text. (Ex, for a white background and blue text, enter 71)
 color %color%
 goto :home
+:logout
+cls 
+call initialize.bat
+goto :top
 :morgame
 cls
 echo l-----------------------------------------------------------------------------------------------------------------------------------------l
