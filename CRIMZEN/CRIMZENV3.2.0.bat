@@ -180,10 +180,19 @@ echo l--------------------------------------------------------------------------
 set /p gamemenu=What game do you want to load?
 cd Resources\applets\BatchGames
 if %gamemenu% ==1 start snake.bat
-if %gamemenu% ==2 start flap
+if %gamemenu% ==2 start goto :flap
 if %gamemenu% ==3 start war.bat
 if %gamemenu% ==4 start drag.bat
-if %gamemenu% ==5 goto :home
+if %gamemenu% ==5 (
+    cd..
+    cd..
+    goto :home
+)
+goto :morgame
+:flap
+cd batch-game-flappy-bird-master
+start Flappy_Bird.bat
+cd..
 goto :morgame
 :shop
 cls
