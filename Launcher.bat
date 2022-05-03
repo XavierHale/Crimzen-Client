@@ -1,11 +1,15 @@
 @echo off
-mode con: cols=32 lines=15
-title Crimzen Bootmanager 1.0
+if exist CrimzenMain goto :boot
+if not exist CrimzenMain goto :install
+pause
+:boot
+mode con: cols=33 lines=15
+title Crimzen Bootmanager 2.3
 echo ^|---------------------^|
 echo ^| Crimzen Bootmanager ^|
 echo ^|---------------------^|
-echo This window will display messages sent from the Crimzen 
-cd CRIMZEN 
+echo This window will display messages sent from Crimzen 
+cd CrimzenMain
 FOR /F "tokens=* delims=" %%x in (ver.crm) DO echo Loading Version %%x
 FOR /F "tokens=* delims=" %%x in (ver.crm) DO start CRIMZENV%%x.bat 
 timeout 5 >nul
@@ -18,3 +22,20 @@ type errmsg.crm
 break>errmsg.crm
 pause
 goto :listerror
+:install
+mode con: cols=127 lines=30
+title Crimzen Installer
+echo ^|-------------------^|
+echo ^| Crimzen Installer ^|
+echo ^|-------------------^|
+echo.
+echo Welcome to Crimzen, the insanely overcomplicated menu system!
+echo You are probably seeing this because this is your first time opening Crimzen.
+echo For this installer to work, you must have Git (https://git-scm.com/) installed.
+echo Make sure this is installed, then press any key to continue.
+pause >nul
+echo Installing the latest version of Crimzen...
+git clone https://github.com/XavierHale/CrimzenMain
+echo All done! Proceding to launch Crimzen...
+cls 
+goto :boot
