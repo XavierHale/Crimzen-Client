@@ -3,7 +3,7 @@ if exist CrimzenMain goto :boot
 if not exist CrimzenMain goto :install
 pause
 :boot
-mode con: cols=33 lines=15
+mode con: cols=80 lines=20
 title Crimzen Bootmanager 2.3
 echo ^|---------------------^|
 echo ^| Crimzen Bootmanager ^|
@@ -25,7 +25,7 @@ break>errmsg.crm
 pause
 goto :listerror
 :install
-mode con: cols=127 lines=30
+mode con: cols=80 lines=20
 title Crimzen Installer
 echo ^|-------------------^|
 echo ^| Crimzen Installer ^|
