@@ -10,6 +10,8 @@ echo ^| Crimzen Bootmanager ^|
 echo ^|---------------------^|
 echo This window will display messages sent from Crimzen 
 cd CrimzenMain
+echo Looking for updates...
+git pull https://github.com/XavierHale/CrimzenMain
 FOR /F "tokens=* delims=" %%x in (ver.crm) DO echo Loading Version %%x
 FOR /F "tokens=* delims=" %%x in (ver.crm) DO start CRIMZENV%%x.bat 
 timeout 5 >nul
