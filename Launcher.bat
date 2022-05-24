@@ -33,7 +33,7 @@ echo ^|-------------------^|
 echo.
 echo Welcome to Crimzen, the insanely overcomplicated menu system!
 echo You are probably seeing this because this is your first time opening Crimzen.
-echo For this installer to work, you must have Git (https://git-scm.com/) installed.
+echo For this installer/auto updater to work, you must have Git (https://git-scm.com/) installed.
 echo Make sure this is installed, then press any key to continue.
 pause >nul
 echo Installing the latest version of Crimzen...
